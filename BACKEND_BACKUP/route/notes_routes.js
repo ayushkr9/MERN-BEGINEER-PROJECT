@@ -1,29 +1,19 @@
 import express from "express"
+import { getAllNotes ,create_Note,Update_note,Delete_note} from "../controller/notescontroller";
 
 const router= express.Router();
 
 // 1 . GET ALL NODES 
-
-router.get("/",(req,res)=>{
-    res.send("You got   notes");
-})
+router.get("/",getAllNotes);
 
 // 2 .CREATE A NEW NODE 
-router.post("/",(req,res)=>{
-    res.status(202).json({message:"Post created successfully"});
-})
+router.post("/",create_Note)
 
 // 3 . PUT (UPDATE ) A NEW NODE 
-router.put("/:id",(req,res)=>{
-    res.status(201).json({message:"Post updated successfully"});
-})
-
+router.put("/:id",Update_note)
 
 // 4 . DELETE THE NODE BY ID 
-router.delete("/:id",(req,res)=>{
-    res.status(200).json({message:"Post deleted  successfully"});
-})
-
+router.delete("/:id",Delete_note)
 
 export default router ;
 
