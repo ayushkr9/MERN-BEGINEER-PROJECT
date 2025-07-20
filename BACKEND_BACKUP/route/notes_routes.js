@@ -1,5 +1,5 @@
 import express from "express"
-import { getAllNotes ,create_Note,Update_note,Delete_note} from "../controller/notescontroller";
+import { getAllNotes ,create_Note,Update_note,Delete_note} from "../controller/notescontroller.js";
 
 const router= express.Router();
 
@@ -16,6 +16,8 @@ router.put("/:id",Update_note)
 router.delete("/:id",Delete_note)
 
 export default router ;
+
+
 
 
 

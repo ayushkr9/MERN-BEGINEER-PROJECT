@@ -1,17 +1,15 @@
-export function getAllNotes(req,res){
-    res.status(200).send("You fetched all notes");
-}
+export const getAllNotes = (req, res) => {
+  res.send("Fetching all notes");
+};
 
+export const create_Note = (req, res) => {
+  res.send("Note created");
+};
 
-export function create_Note(req,res){
-    res.status(201).json({message:"You fetched all notes"});
-}
+export const Update_note = (req, res) => {
+  res.send("Note updated");
+};
 
-
-export function Update_note(req,res){
-    res.status(202).json({message:"You Updated all notes"});
-}
-
-export function Delete_note(req,res){
-    res.status(203).json({message:"You Deleted all notes"});
-}
+export const Delete_note = (req, res) => {
+  res.send("Note deleted");
+};
