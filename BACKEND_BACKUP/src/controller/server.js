@@ -8,6 +8,12 @@ const app = express();
 
 
 app.use("/api/notes", notes_routes);
+app.use("/api/products", product_routes);
+app.use("/api/payments", payments_routes);
+
+
+
+
 
 
 app.listen(port,()=>{
